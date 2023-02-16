@@ -11,13 +11,13 @@
     <div>
         <h1><a href="/">My blog</a></h1>
     </div>
-
+{% for post in posts %}
     <div>
-        <p>published: 14.06.2014, 12:39</p>
-        <h2><a href="/">My first post</a></h2>
-        <p>Hello every one, now i am learning type very fast as can as i</p>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="/">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
-
+{% endfor %}
     <div>
         <p>published: 14.06.2014, 12:39</p>
         <h2><a href="/">My second post</a></h2>
